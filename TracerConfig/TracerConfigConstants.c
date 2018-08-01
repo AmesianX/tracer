@@ -87,9 +87,6 @@ CONST UNICODE_STRING TraceStoreSqlite3ExtDllFilename =
 CONST UNICODE_STRING PythonTracerInjectionDllFilename =
     RTL_CONSTANT_STRING(L"PythonTracerInjection.dll");
 
-CONST UNICODE_STRING PerfectHashTableDllFilename =
-    RTL_CONSTANT_STRING(L"PerfectHashTable.dll");
-
 #define OFFSET_ENTRY(Name)                      \
     {                                           \
         FIELD_OFFSET(TRACER_PATHS, Name##Path), \
@@ -111,7 +108,6 @@ CONST TRACER_OFFSET_TO_PATH_ENTRY DllPathOffsets[] = {
     OFFSET_ENTRY(TracedPythonSessionDll),
     OFFSET_ENTRY(TraceStoreSqlite3ExtDll),
     OFFSET_ENTRY(PythonTracerInjectionDll),
-    OFFSET_ENTRY(PerfectHashTableDll),
     LAST_OFFSET_ENTRY,
 };
 
@@ -137,7 +133,6 @@ CONST TRACER_DLL_PATH_TYPE TracerInjectionDllsBitmap = {
     0, // TracedPythonSessionDllPath
     0, // TraceStoreSqlite3ExtDllPath
     1, // PythonTracerInjectionDllPath
-    0, // PerfectHashTableDllPath
     0, // Remaining
 };
 
